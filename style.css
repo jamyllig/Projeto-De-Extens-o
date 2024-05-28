@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 1.0;
+}
+
+/* Acessibilidade */
+a:focus, input:focus, button:focus {
+  outline: 2px solid #000; /* Cor de contraste alta */
+}
+.caixa h2, .caixa h3, .caixa p {
+  margin-bottom: 0.5em;
+}
+.enabled {
+  opacity: 50%;
+  transition: opacity 0.3s; /* Adiciona uma transição suave */
+}
+.enabled:hover,
+.enabled.clicked {
+  opacity: 100%;
+}
+.active{
+  opacity: 100%;
+}
+/* Painel de navegação Horizontal */
+#background-nav {
+  order: 1;
+  display: flex;
+  width: 100%;
+  height: 230px;
+  background: url(./img/fundo.png) bottom repeat-x;
+  justify-content: center;
+  min-width: 740px;
+}
+#nav-horizontal {
+  z-index: 1;
+  display: flex;
+  position: relative;
+  right: 10px;
+  text-align: center;
+  height: 30px;
+  margin-top: 130px;
+}
+
+#nav-horizontal a {
+  height: 40px;
+  display: block;
+  line-height: 0px;
+  padding: 20px 25px;
+  color: white;
+  text-decoration: none;
+  background: rgb(171, 19, 19);
+  font-weight: bold;
+}
+a#nav-home{
+  background-color: #6c0220;
+  cursor: text;
+}
+#nav-horizontal a:hover {
+  background-color: brown;
+}
+/* IMGs do Painel Horizontal */
+.img-logo {
+  order: 0;
+  position: relative;
+  top: 10%;
+  left: 100px;
+}
+.img-logo img {
+  width: 150px;
+  height: 70px;
+}
+
+.img-brasil {
+  position: relative;
+  right: 70px;
+  order: 2;
+}
+
+.img-brasil img {
+  width: 170px;
+  height: 170px;
+}
+
+/* Pagina de conteudos (contem as Divs de conteudo) */
+
+/* Estilo das caixas em geral */
+.caixa {
+  width: 100%;
+  background: url(./img/fundo-caixa.png);
+  padding: 5px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.caixa h2 {
+    font-size: 1em;
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+}
+.caixa h3{
+  display: inline-block;
+  
+  color: white; 
+  background-color: #820404e9;
+  padding: 3px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+/* Caixa de Conteudos-Principais (para centralizar) */
+.conteudos-principais{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 15px;
+  margin-top: 15px;
+}
+
+
+/* 1 coluna (size e position) */
+.coluna1{
+  width: 180px;
+}
+
+/* Estilo das caixas verticais */
+.caixa.caixa-vertical{
+    width: 180px;
+    float: left;
+}
+
+/* Caixa entrevistas */
+.entrevistas {
+  background-color: white;
+}
+.entrevistas a {
+  font-size: 0.9em;
+  display: block;
+  padding: 3px;
+  line-height: 30px;
+  text-decoration:none;
+  color: black;
+  border-bottom:1px solid #f3f3f3;
+}
+.entrevistas a:hover{
+  background: url(./img/marcador.png) no-repeat left;
+  padding-left: 20px;
+  color: #a1a1a1;
+}
+
+/* Caixa news */
+.formulario{
+  background-color: white;
+  padding: 5px;
+}
+.formulario input[type="text"]{
+  border: 2px solid black;
+  width: 130px;
+  height: 25px;
+  padding: 5px;
+}
+.formulario input[type="submit"]{
+  background-color: #820404e9;
+  color: white;
+  border: 2px solid black;
+  width: 70px;
+  height: 28px;
+  padding: 5px;
+}
+  /* Coluna 2 */
+.coluna2{
+  width: 270px;
+}
+    /* Caixas Superiores */
+.caixa .caixa-superior img{
+  width: 100%;
+}
+.caixa-superior a{
+  color: #9c0101e9;
+}
+
+      /* Caixa Destaque (Pag Principal) */
+.caixa-superior.pag-principal{
+  background-color: white;
+  padding: 5px;
+}
+
+/* Coluna 2 (Pag Brasil) */
+#brasil .coluna2{
+  width: 555px;
+}
+a#nav-brasil{
+  background: #6c0220;
+  cursor: text;
+}
+
+
+/* Caixa Destaque (Pag fotos) */
+#fotos .coluna2{
+  width: 750px;
+}
+a#nav-fotos{
+  background: #6c0220;
+  cursor: text;
+}
+
+/* Caixa Ultima entrevista */
+
+    /* Caixas Inferiores */
+/* Caixa Mundo e Noticias Recentes*/
+.caixa-inferior{
+  display: block;
+  background-color: white;
+}
+
+.lista-noticias li {
+  list-style: none;
+  padding: 2px;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+}
+.lista-noticias li a {
+  text-decoration: none;
+}
+.lista-noticias li a img {
+  float: left;
+  padding: 3px 3px 0;
+  width: 80px;
+}
+.lista-noticias li a h4 {
+  font-size: 0.8em;
+  padding: 0;
+  color: #3e7ab9;
+}
+.lista-noticias li a p {
+  font-size: 0.7em;
+  color: #000;
+}
+
+
+/* Rodapé */
+.rodape{
+  width: 100%;
+  background-color: #294c71;
+  color: white;
+  height: 70px;
+  line-height: 70px;
+  padding-left: 50px;
+}
