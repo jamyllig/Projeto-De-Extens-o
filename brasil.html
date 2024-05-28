@@ -2,107 +2,113 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Cidade</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Cidade</title>
 </head>
 
 <body id="brasil">
-    <div id="background-nav">
-        <div class="img-logo"><img src="./img/logo.png" alt="" /></div>
-        <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="" /></div>
-        <div id="nav-horizontal">
-            <a href="./index.html">Home</a>
-            <a id="nav-brasil" href="">Brasil</a>
-            <a href="">Internacional</a>
-            <a href="">Economia</a>
-            <a href="">Saúde</a>
-            <a href="">Ciencia</a>
-            <a href="./fotos.html">Fotos</a>
+  <header id="background-nav">
+    <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
+    <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
+    <nav id="nav-horizontal" aria-label="Menu principal">
+      <a href="./index.html">Home</a>
+      <a id="nav-brasil" href="">Brasil</a>
+      <a href="">Internacional</a>
+      <a href="">Economia</a>
+      <a href="">Saúde</a>
+      <a href="">Ciencia</a>
+      <a href="./fotos.html">Fotos</a>
+    </nav>
+  </header>
+
+  <main class="conteudos-principais">
+    <!-- Coluna 1 -->
+    <aside class="coluna1">
+      <section class="caixa caixa-vertical">
+        <h2>Entrevistas</h2>
+        <div class="entrevistas">
+          <a href="">José Almeida</a>
+          <a href="">José Almeida</a>
+          <a href="">José Almeida</a>
+          <a href="">José Almeida</a>
+          <a href="">José Almeida</a>
+          <a href="">José Almeida</a>
+          <a href="">José Almeida</a>
+          <a href="">José Almeida</a>
         </div>
-    </div>
-
-    <div class="conteudos-principais">
-        <!-- Coluna 1 -->
-        <div class="coluna1">
-            <div class="caixa caixa-vertical">
-                <h2>Entrevistas</h2>
-                <div class="entrevistas">
-                    <a href="">José Almeida</a>
-                    <a href="">José Almeida</a>
-                    <a href="">José Almeida</a>
-                    <a href="">José Almeida</a>
-                    <a href="">José Almeida</a>
-                    <a href="">José Almeida</a>
-                    <a href="">José Almeida</a>
-                    <a href="">José Almeida</a>
-                </div>
-            </div>
-            <div class="caixa caixa-vertical">
-                <h2>News</h2>
-                <div class="news">
-                    <form class="formulario" action="">
-                        <label for="email">E-mail
-                            <input name="email" type="text" placeholder="E-mail" />
-                            <input type="submit" value="Cadastrar" />
-                        </label>
-                    </form>
-                </div>
-            </div>
+      </section>
+      <section class="caixa caixa-vertical">
+        <h2>News</h2>
+        <div class="news">
+          <form class="formulario" action="">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="text" placeholder="E-mail" />
+            <input type="submit" value="Cadastrar" />
+          </form>
         </div>
-        <!--FIM Coluna 1 -->
+      </section>
+    </aside>
+    <!--FIM Coluna 1 -->
 
-        <!--Coluna 2 -->
-        <div class="coluna2 coluna2-brasil">
-            <div class="caixa">
-                <h2>Nova legislação</h2>
-                <div class="caixa-superior pag-principal pag-brasil pag-fotos">
-                    <h3>Entrevista com felipe silva</h3>
-                    <img src="./img/taxi.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="">Leia mais...</a>
-                </div>
-            </div>
-            <!-- Caixa Mundo -->
-            <div class="caixa">
-                <h2>Mundo</h2>
-                <div class="caixa-inferior">
-                    <ul class="lista-noticias">
-                        <li><a href="">
-                                <img src="./img/cidade.jpg" alt="">
-                                <h4>Novas Tecnologias</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="./img/taxi.jpg" alt="">
-                                <h4>Novas Tecnologias</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="./img/tecnologia.jpg" alt="">
-                                <h4>Novas Tecnologias</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </a></li>
-                        <li><a href="">
-                                <img src="./img/doutor.jpg" alt="">
-                                <h4>Novas Tecnologias</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </a></li>
-                    </ul>
-                </div>
-
-            </div>
+    <!--Coluna 2 -->
+    <section class="coluna2">
+      <article class="caixa">
+        <h2>Nova legislação</h2>
+        <div class="caixa-superior pag-principal pag-brasil pag-fotos">
+          <h3>Entrevista com Felipe Silva</h3>
+          <img src="./img/taxi.jpg" alt="Imagem de um táxi ilustrando a nova legislação" />
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="">Leia mais...</a>
         </div>
-        <!--FIM Coluna 2 -->
+      </article>
+      <!-- Caixa Mundo -->
+      <article class="caixa">
+        <h2>Mundo</h2>
+        <div class="caixa-inferior">
+          <ul class="lista-noticias">
+            <li><a href="">
+                <img src="./img/cidade.jpg" alt="Imagem ilustrativa de uma cidade" />
+                <h4>Novas Tecnologias</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </a></li>
+            <li><a href="">
+                <img src="./img/taxi.jpg" alt="Imagem de um táxi ilustrando novas tecnologias" />
+                <h4>Novas Tecnologias</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </a></li>
+            <li><a href="">
+                <img src="./img/tecnologia.jpg" alt="Imagem ilustrativa de novas tecnologias" />
+                <h4>Novas Tecnologias</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </a></li>
+            <li><a href="">
+                <img src="./img/doutor.jpg" alt="Imagem ilustrativa de um doutor" />
+                <h4>Novas Tecnologias</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+    <!--FIM Coluna 2 -->
+  </main>
+
+  <footer class="rodape" role="contentinfo">
+    © Copyright 2000-2024 Notícias cidade
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-    <!-- Fim Conteudos Principais -->
-    <div class="rodape">
-
-        © Copyright 2000-2018 Notícias cidade
-
-    </div>
-
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 
 </html>

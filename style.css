@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-weight: 1.0;
+  font-size: 1.0em;
 }
 
 /* Acessibilidade */
@@ -19,15 +19,15 @@ a:focus, input:focus, button:focus {
   opacity: 50%;
   transition: opacity 0.3s; /* Adiciona uma transição suave */
 }
-.enabled:hover,
-.enabled.clicked {
+.enabled:hover {
   opacity: 100%;
 }
-.active{
+.active {
   opacity: 100%;
 }
+
 /* Painel de navegação Horizontal */
-#background-nav {
+header {
   order: 1;
   display: flex;
   width: 100%;
@@ -36,7 +36,7 @@ a:focus, input:focus, button:focus {
   justify-content: center;
   min-width: 740px;
 }
-#nav-horizontal {
+nav#nav-horizontal {
   z-index: 1;
   display: flex;
   position: relative;
@@ -45,8 +45,7 @@ a:focus, input:focus, button:focus {
   height: 30px;
   margin-top: 130px;
 }
-
-#nav-horizontal a {
+nav#nav-horizontal a {
   height: 40px;
   display: block;
   line-height: 0px;
@@ -56,13 +55,14 @@ a:focus, input:focus, button:focus {
   background: rgb(171, 19, 19);
   font-weight: bold;
 }
-a#nav-home{
+a#nav-home {
   background-color: #6c0220;
   cursor: text;
 }
-#nav-horizontal a:hover {
+nav#nav-horizontal a:hover {
   background-color: brown;
 }
+
 /* IMGs do Painel Horizontal */
 .img-logo {
   order: 0;
@@ -74,13 +74,11 @@ a#nav-home{
   width: 150px;
   height: 70px;
 }
-
 .img-brasil {
   position: relative;
   right: 70px;
   order: 2;
 }
-
 .img-brasil img {
   width: 170px;
   height: 170px;
@@ -97,22 +95,22 @@ a#nav-home{
   text-align: left;
 }
 .caixa h2 {
-    font-size: 1em;
-    background: #294c71;
-    color: #fff;
-    padding: 5px;
+  font-size: 1em;
+  background: #294c71;
+  color: #fff;
+  padding: 5px;
 }
-.caixa h3{
+.caixa h3 {
   display: inline-block;
-  
-  color: white; 
+  color: white;
   background-color: #820404e9;
   padding: 3px;
   font-size: 0.8em;
   text-transform: uppercase;
 }
+
 /* Caixa de Conteudos-Principais (para centralizar) */
-.conteudos-principais{
+main.conteudos-principais {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -123,16 +121,15 @@ a#nav-home{
   margin-top: 15px;
 }
 
-
 /* 1 coluna (size e position) */
-.coluna1{
+.coluna1 {
   width: 180px;
 }
 
 /* Estilo das caixas verticais */
-.caixa.caixa-vertical{
-    width: 180px;
-    float: left;
+.caixa.caixa-vertical {
+  width: 180px;
+  float: left;
 }
 
 /* Caixa entrevistas */
@@ -144,28 +141,28 @@ a#nav-home{
   display: block;
   padding: 3px;
   line-height: 30px;
-  text-decoration:none;
+  text-decoration: none;
   color: black;
-  border-bottom:1px solid #f3f3f3;
+  border-bottom: 1px solid #f3f3f3;
 }
-.entrevistas a:hover{
+.entrevistas a:hover {
   background: url(./img/marcador.png) no-repeat left;
   padding-left: 20px;
   color: #a1a1a1;
 }
 
 /* Caixa news */
-.formulario{
+.formulario {
   background-color: white;
   padding: 5px;
 }
-.formulario input[type="text"]{
+.formulario input[type="text"] {
   border: 2px solid black;
   width: 130px;
   height: 25px;
   padding: 5px;
 }
-.formulario input[type="submit"]{
+.formulario input[type="submit"] {
   background-color: #820404e9;
   color: white;
   border: 2px solid black;
@@ -173,52 +170,52 @@ a#nav-home{
   height: 28px;
   padding: 5px;
 }
-  /* Coluna 2 */
-.coluna2{
+
+/* Coluna 2 */
+.coluna2 {
   width: 270px;
 }
-    /* Caixas Superiores */
-.caixa .caixa-superior img{
+
+/* Caixas Superiores */
+.caixa .caixa-superior img {
   width: 100%;
 }
-.caixa-superior a{
+.caixa-superior a {
   color: #9c0101e9;
 }
 
-      /* Caixa Destaque (Pag Principal) */
-.caixa-superior.pag-principal{
+/* Caixa Destaque (Pag Principal) */
+.caixa-superior.pag-principal {
   background-color: white;
   padding: 5px;
 }
 
 /* Coluna 2 (Pag Brasil) */
-#brasil .coluna2{
+#brasil .coluna2 {
   width: 555px;
 }
-a#nav-brasil{
+a#nav-brasil {
   background: #6c0220;
   cursor: text;
 }
 
-
 /* Caixa Destaque (Pag fotos) */
-#fotos .coluna2{
+#fotos .coluna2 {
   width: 750px;
 }
-a#nav-fotos{
+a#nav-fotos {
   background: #6c0220;
   cursor: text;
 }
 
 /* Caixa Ultima entrevista */
 
-    /* Caixas Inferiores */
-/* Caixa Mundo e Noticias Recentes*/
-.caixa-inferior{
+/* Caixas Inferiores */
+/* Caixa Mundo e Noticias Recentes */
+.caixa-inferior {
   display: block;
   background-color: white;
 }
-
 .lista-noticias li {
   list-style: none;
   padding: 2px;
@@ -243,9 +240,8 @@ a#nav-fotos{
   color: #000;
 }
 
-
 /* Rodapé */
-.rodape{
+footer.rodape {
   width: 100%;
   background-color: #294c71;
   color: white;

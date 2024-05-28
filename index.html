@@ -9,10 +9,10 @@
 </head>
 
 <body id="home">
-  <nav id="background-nav">
-    <div class="img-logo"><img src="./img/logo.png" alt="" /></div>
-    <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="" /></div>
-    <div id="nav-horizontal" aria-label="Menu principal">>
+  <header id="background-nav">
+    <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
+    <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
+    <nav id="nav-horizontal" aria-label="Menu principal">
       <a id="nav-home" href="./index.html">Home</a>
       <a href="./brasil.html">Brasil</a>
       <a href="">Internacional</a>
@@ -20,13 +20,13 @@
       <a href="">Saúde</a>
       <a href="">Ciencia</a>
       <a href="./fotos.html">Fotos</a>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <div class="conteudos-principais" role="main">
+  <main class="conteudos-principais">
     <!-- Coluna 1 -->
-    <div class="coluna1">
-      <div class="caixa caixa-vertical">
+    <aside class="coluna1">
+      <section class="caixa caixa-vertical">
         <h2>Entrevistas</h2>
         <div class="entrevistas">
           <a href="">José Almeida</a>
@@ -38,130 +38,117 @@
           <a href="">José Almeida</a>
           <a href="">José Almeida</a>
         </div>
-      </div>
-      <div class="caixa caixa-vertical">
+      </section>
+      <section class="caixa caixa-vertical">
         <h2>News</h2>
         <div class="news">
           <form class="formulario" action="">
             <label for="email">E-mail</label>
             <input id="email" name="email" type="text" placeholder="E-mail" />
             <input type="submit" value="Cadastrar" />
-         </form>         
+          </form>
         </div>
-      </div>
-    </div>
+      </section>
+    </aside>
     <!--FIM Coluna 1 -->
 
     <!--Coluna 2 -->
-    <div class="coluna2">
-      <div class="caixa">
+    <section class="coluna2">
+      <article class="caixa">
         <h2>Nova legislação</h2>
         <div class="caixa-superior pag-principal site-brasil site-fotos">
           <h3>Lei do Estágio no Brasil:</h3>
-          <img src="./img/taxi.jpg" alt="">
+          <img src="./img/taxi.jpg" alt="Imagem de um táxi ilustrando a nova legislação" />
           <p>A nova legislação para estágios entrou em vigor em janeiro de 2024, trazendo mudanças significativas. A idade mínima para estagiar foi reduzida para 14 anos para estudantes do ensino médio. A carga horária máxima permitida é de 6 horas diárias e 30 horas semanais para estudantes do ensino médio, e 8 horas diárias e 40 horas semanais para estudantes do ensino superior. Além disso, a lei exige que os estagiários recebam bolsa-auxílio, auxílio-transporte e seguro contra acidentes pessoais</p>
           <a href="https://congressodireitoesaude.com.br/descubra-as-novidades-da-lei-do-estagio-em-2024/">Leia mais...</a>
         </div>
-      </div>
-      <!-- Caixa Mundo -->
-      <div class="caixa">
+      </article>
+      <article class="caixa">
         <h2>Mundo</h2>
         <div class="caixa-inferior">
           <ul class="lista-noticias">
             <li><a href="https://pt.euronews.com/2024/05/20/ataque-russo-com-misseis-faz-seis-mortos-em-suburbio-de-kharkiv">
-                <img src="./img/ucrania.jpg" alt="">
+                <img src="./img/ucrania.jpg" alt="Imagem ilustrativa do conflito na Ucrânia" />
                 <h4>Conflito na ucrânia</h4>
                 <p>Um ataque russo com mísseis em um subúrbio de Kharkiv matou seis pessoas​ (euronews)​.</p>
               </a></li>
             <li><a href="https://g1.globo.com/mundo/noticia/2024/05/20/ebrahim-raisi-presidente-do-ira-morre-em-queda-de-helicoptero-diz-tv-estatal.ghtml">
-                <img src="./img/helicoptero.webp" alt="">
+                <img src="./img/helicoptero.webp" alt="Imagem ilustrativa de um helicóptero" />
                 <h4>Irã</h4>
                 <p>Ebrahim Raisi morreu em um acidente de helicóptero junto com o ministro das Relações Exteriores e outros membros da sua comitiva.​</p>
               </a></li>
             <li><a href="">
-                <img src="./img/tecnologia.jpg" alt="">
+                <img src="./img/tecnologia.jpg" alt="Imagem ilustrativa de novas tecnologias" />
                 <h4>Novas Tecnologias</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </a></li>
             <li><a href="">
-                <img src="./img/doutor.jpg" alt="">
+                <img src="./img/doutor.jpg" alt="Imagem ilustrativa de um doutor" />
                 <h4>Novas Tecnologias</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </a></li>
-
           </ul>
         </div>
-
-
-
-      </div>
-    </div>
+      </article>
+    </section>
     <!--FIM Coluna 2 -->
 
     <!-- Coluna 3 -->
-    <div class="coluna2">
-      <div class="caixa">
+    <section class="coluna2">
+      <article class="caixa">
         <h2>Declarações de Impostos</h2>
         <div class="caixa-superior pag-principal site-brasil site-fotos">
           <h3>Entrevista com felipe silva</h3>
-          <img src="./img/taxi.jpg" alt="">
+          <img src="./img/taxi.jpg" alt="Imagem de um táxi ilustrando o tema de declaração de impostos" />
           <p>Mais de 10 milhões de brasileiros ainda não entregaram sua declaração do Imposto de Renda. A data limite para a entrega é 31 de maio, e quem não cumprir com o prazo deverá pagar multa.</p>
           <a href="https://agenciabrasil.ebc.com.br/">Leia mais...</a>
         </div>
-      </div>
-
-      <!-- Caixa Noticias Recentes -->
-      <div class="caixa">
+      </article>
+      <article class="caixa">
         <h2>Brasil</h2>
         <div class="caixa-inferior">
           <ul class="lista-noticias">
             <li><a href="https://agenciagov.ebc.com.br/noticias/202405/governo-federal-aprimora-condicoes-de-trabalho-para-atuacao-de-profissionais-de-seguranca-publica">
-                <img src="./img/cidade.jpg" alt="">
+                <img src="./img/cidade.jpg" alt="Imagem ilustrativa de uma cidade" />
                 <h4>Justiça</h4>
                 <p>Ministério da Justiça estabelece diretrizes nacionais para uso de câmeras corporais</p>
               </a></li>
             <li><a href="https://agenciagov.ebc.com.br/noticias/202405/mec-aprova-novas-diretrizes-para-formacao-de-professores">
-                <img src="./img/taxi.jpg" alt="">
+                <img src="./img/taxi.jpg" alt="Imagem de um táxi ilustrando novas diretrizes educacionais" />
                 <h4>Educação</h4>
                 <p>Licenciatura para professores deve ser no mínimo 50% presencial, determina MEC.</p>
               </a></li>
             <li><a href="https://agenciagov.ebc.com.br/noticias/202405/na-oms-brasil-defende-acordo-sobre-pandemias-com-maior-acesso-a-saude">
-                <img src="./img/tecnologia.jpg" alt="">
+                <img src="./img/tecnologia.jpg" alt="Imagem ilustrativa de novas tecnologias em saúde" />
                 <h4>Saúde</h4>
                 <p>Na OMS, Brasil defende transferência global de tecnologia para enfrentar pandemias</p>
               </a></li>
             <li><a href="">
-                <img src="./img/doutor.jpg" alt="">
+                <img src="./img/doutor.jpg" alt="Imagem ilustrativa de um doutor" />
                 <h4>Novas Tecnologias</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </a></li>
           </ul>
         </div>
-      </div>
-      <!--FIM Coluna 3 -->
-      <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    
-        document.getElementById('enabledElement').addEventListener('click', function() {
-          this.classList.add('clicked');
-        });
-      </script>
+      </article>
+    </section>
+    <!--FIM Coluna 3 -->
+  </main>
+  
+  <footer class="rodape" role="contentinfo">
+    © Copyright 2000-2024 Notícias cidade
+  </footer>
 
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-    <!-- Fim Conteudos Principais -->
-    <footer class="rodape" role="contentinfo">>
-
-      © Copyright 2000-2024 Notícias cidade
-
-    </footer>
-
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 
 </html>
