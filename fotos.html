@@ -21,6 +21,7 @@
       <a href="">Ciencia</a>
       <a id="nav-fotos" href="">Fotos</a>
     </nav>
+    <button id="toggle-contrast" aria-pressed="false">Alto Contraste</button>
   </header>
 
   <main class="conteudos-principais">
@@ -80,6 +81,13 @@
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script>
+    document.getElementById('toggle-contrast').addEventListener('click', function() {
+      document.body.classList.toggle('high-contrast');
+      var isPressed = this.getAttribute('aria-pressed') === 'true';
+      this.setAttribute('aria-pressed', !isPressed);
+    });
   </script>
 </body>
 

@@ -63,6 +63,25 @@ nav#nav-horizontal a:hover {
   background-color: brown;
 }
 
+/* Botao de alto-contraste */
+#toggle-contrast {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+#toggle-contrast:hover {
+  background-color: #555;
+}
+
 /* IMGs do Painel Horizontal */
 .img-logo {
   order: 0;
@@ -249,3 +268,108 @@ footer.rodape {
   line-height: 70px;
   padding-left: 50px;
 }
+
+
+/* ALTO CONTRASTE */
+/* Estilos para Modo de Alto Contraste */
+body.high-contrast {
+  background-color: #000;
+  color: #fff;
+}
+
+body.high-contrast .caixa.caixa-vertical a {
+  color: #ffff00;
+  font-size: 16px;
+}
+body.high-contrast #title-email{
+  background-color: #000;
+  color: #ffffff;
+  padding: 3px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+body.high-contrast header {
+  background-color: #000;
+}
+
+body.high-contrast .caixa {
+  background-color: #000;
+  border: 2px solid #fff;
+}
+body.high-contrast .caixa-superior,
+body.high-contrast .caixa-inferior{
+  background-color: #000;
+}
+
+body.high-contrast .caixa h2,
+body.high-contrast .caixa h3,
+body.high-contrast .caixa p {
+  color: #fff;
+  font-weight:bold;
+}
+body.high-contrast .caixa p {
+  font-size: 14px;
+}
+
+body.high-contrast .caixa h2 {
+  background-color: #000;
+}
+
+body.high-contrast .caixa h3 {
+  background-color: #333;
+}
+
+body.high-contrast .caixa h4 {
+  color: #0077ff;
+  font-size: 14px;
+}
+
+body.high-contrast .entrevistas {
+  background-color: #000;
+}
+
+body.high-contrast .caixa a {
+  color: #ffff00;
+}
+
+body.high-contrast .caixa a:hover {
+  color: #ff0;
+}
+
+
+body.high-contrast img {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Estilos adicionais para garantir que todos os elementos sejam legíveis em alto contraste */
+body.high-contrast input,
+body.high-contrast button,
+body.high-contrast select,
+body.high-contrast textarea {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+body.high-contrast input::placeholder,
+body.high-contrast textarea::placeholder {
+  color: #ccc;
+}
+
+body.high-contrast nav#nav-horizontal a {
+  background: #000;
+  color: #fff;
+}
+
+body.high-contrast nav#nav-horizontal a:hover {
+  background-color: #555;
+}
+
+/* Rodapé */
+body.high-contrast footer.rodape {
+  background-color: #000;
+  color: #fff;
+}
+
+

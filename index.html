@@ -9,19 +9,20 @@
 </head>
 
 <body id="home">
-  <header id="background-nav">
-    <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
-    <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
-    <nav id="nav-horizontal" aria-label="Menu principal">
-      <a id="nav-home" href="./index.html">Home</a>
-      <a href="./brasil.html">Brasil</a>
-      <a href="">Internacional</a>
-      <a href="">Economia</a>
-      <a href="">Saúde</a>
-      <a href="">Ciencia</a>
-      <a href="./fotos.html">Fotos</a>
-    </nav>
-  </header>
+<header id="background-nav">
+  <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
+  <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
+  <nav id="nav-horizontal" aria-label="Menu principal">
+    <a id="nav-home" href="./index.html">Home</a>
+    <a href="./brasil.html">Brasil</a>
+    <a href="">Internacional</a>
+    <a href="">Economia</a>
+    <a href="">Saúde</a>
+    <a href="">Ciencia</a>
+    <a href="./fotos.html">Fotos</a>
+  </nav>
+  <button id="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+</header>  
 
   <main class="conteudos-principais">
     <!-- Coluna 1 -->
@@ -37,7 +38,7 @@
         <h2>News</h2>
         <div class="news">
           <form class="formulario" action="">
-            <label for="email">E-mail</label>
+            <label id="title-email" for="email">E-mail</label>
             <input id="email" name="email" type="text" placeholder="E-mail" />
             <input type="submit" value="Cadastrar" />
           </form>
@@ -142,6 +143,13 @@
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script>
+    document.getElementById('toggle-contrast').addEventListener('click', function() {
+      document.body.classList.toggle('high-contrast');
+      var isPressed = this.getAttribute('aria-pressed') === 'true';
+      this.setAttribute('aria-pressed', !isPressed);
+    });
   </script>
 </body>
 
