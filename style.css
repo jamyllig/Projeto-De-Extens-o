@@ -3,25 +3,36 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 1.0em;
 }
 
 /* Acessibilidade */
-a:focus, input:focus, button:focus {
-  outline: 2px solid #000; /* Cor de contraste alta */
+a:focus,
+input:focus,
+button:focus {
+  outline: 2px solid #000;
+  /* Cor de contraste alta */
 }
-.caixa h2, .caixa h3, .caixa p {
+
+.caixa h2,
+.caixa h3,
+.caixa p {
   margin-bottom: 0.5em;
 }
+
 .enabled {
   opacity: 50%;
-  transition: opacity 0.3s; /* Adiciona uma transição suave */
+  transition: opacity 0.3s;
+  /* Adiciona uma transição suave */
 }
+
 .enabled:hover {
   opacity: 100%;
 }
+
 .active {
   opacity: 100%;
 }
@@ -36,6 +47,7 @@ header {
   justify-content: center;
   min-width: 740px;
 }
+
 nav#nav-horizontal {
   z-index: 1;
   display: flex;
@@ -45,6 +57,7 @@ nav#nav-horizontal {
   height: 30px;
   margin-top: 130px;
 }
+
 nav#nav-horizontal a {
   height: 40px;
   display: block;
@@ -55,17 +68,19 @@ nav#nav-horizontal a {
   background: rgb(171, 19, 19);
   font-weight: bold;
 }
+
 a#nav-home {
   background-color: #6c0220;
   cursor: text;
 }
+
 nav#nav-horizontal a:hover {
   background-color: brown;
 }
 
 /* Botao de alto-contraste */
 #toggle-contrast {
-  position: absolute;
+  align-items: flex-start;
   top: 10px;
   right: 10px;
   background-color: #333;
@@ -75,12 +90,17 @@ nav#nav-horizontal a:hover {
   cursor: pointer;
   font-size: 1em;
   border-radius: 5px;
+  margin-bottom: 0.5em;
   z-index: 1000;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 60px; /* Largura mínima para os botões */
+  max-width: 150px; /* Largura máxima para os botões */
+
 }
 
-#toggle-contrast:hover {
-  background-color: #555;
-}
 
 /* IMGs do Painel Horizontal */
 .img-logo {
@@ -89,15 +109,18 @@ nav#nav-horizontal a:hover {
   top: 10%;
   left: 100px;
 }
+
 .img-logo img {
   width: 150px;
   height: 70px;
 }
+
 .img-brasil {
   position: relative;
   right: 70px;
   order: 2;
 }
+
 .img-brasil img {
   width: 170px;
   height: 170px;
@@ -113,12 +136,14 @@ nav#nav-horizontal a:hover {
   margin-bottom: 15px;
   text-align: left;
 }
+
 .caixa h2 {
   font-size: 1em;
   background: #294c71;
   color: #fff;
   padding: 5px;
 }
+
 .caixa h3 {
   display: inline-block;
   color: white;
@@ -155,6 +180,7 @@ main.conteudos-principais {
 .entrevistas {
   background-color: white;
 }
+
 .entrevistas a {
   font-size: 0.9em;
   display: block;
@@ -164,6 +190,7 @@ main.conteudos-principais {
   color: black;
   border-bottom: 1px solid #f3f3f3;
 }
+
 .entrevistas a:hover {
   background: url(./img/marcador.png) no-repeat left;
   padding-left: 20px;
@@ -175,12 +202,14 @@ main.conteudos-principais {
   background-color: white;
   padding: 5px;
 }
+
 .formulario input[type="text"] {
   border: 2px solid black;
   width: 130px;
   height: 25px;
   padding: 5px;
 }
+
 .formulario input[type="submit"] {
   background-color: #820404e9;
   color: white;
@@ -199,6 +228,7 @@ main.conteudos-principais {
 .caixa .caixa-superior img {
   width: 100%;
 }
+
 .caixa-superior a {
   color: #9c0101e9;
 }
@@ -213,6 +243,7 @@ main.conteudos-principais {
 #brasil .coluna2 {
   width: 555px;
 }
+
 a#nav-brasil {
   background: #6c0220;
   cursor: text;
@@ -222,6 +253,7 @@ a#nav-brasil {
 #fotos .coluna2 {
   width: 750px;
 }
+
 a#nav-fotos {
   background: #6c0220;
   cursor: text;
@@ -235,25 +267,30 @@ a#nav-fotos {
   display: block;
   background-color: white;
 }
+
 .lista-noticias li {
   list-style: none;
   padding: 2px;
   border-bottom: 1px solid #ccc;
   overflow: hidden;
 }
+
 .lista-noticias li a {
   text-decoration: none;
 }
+
 .lista-noticias li a img {
   float: left;
   padding: 3px 3px 0;
   width: 80px;
 }
+
 .lista-noticias li a h4 {
   font-size: 0.8em;
   padding: 0;
   color: #3e7ab9;
 }
+
 .lista-noticias li a p {
   font-size: 0.7em;
   color: #000;
@@ -269,7 +306,6 @@ footer.rodape {
   padding-left: 50px;
 }
 
-
 /* ALTO CONTRASTE */
 /* Estilos para Modo de Alto Contraste */
 body.high-contrast {
@@ -281,7 +317,8 @@ body.high-contrast .caixa.caixa-vertical a {
   color: #ffff00;
   font-size: 16px;
 }
-body.high-contrast #title-email{
+
+body.high-contrast #title-email {
   background-color: #000;
   color: #ffffff;
   padding: 3px;
@@ -297,8 +334,9 @@ body.high-contrast .caixa {
   background-color: #000;
   border: 2px solid #fff;
 }
+
 body.high-contrast .caixa-superior,
-body.high-contrast .caixa-inferior{
+body.high-contrast .caixa-inferior {
   background-color: #000;
 }
 
@@ -306,8 +344,9 @@ body.high-contrast .caixa h2,
 body.high-contrast .caixa h3,
 body.high-contrast .caixa p {
   color: #fff;
-  font-weight:bold;
+  font-weight: bold;
 }
+
 body.high-contrast .caixa p {
   font-size: 14px;
 }
@@ -336,7 +375,6 @@ body.high-contrast .caixa a {
 body.high-contrast .caixa a:hover {
   color: #ff0;
 }
-
 
 body.high-contrast img {
   filter: invert(1) hue-rotate(180deg);
@@ -372,4 +410,127 @@ body.high-contrast footer.rodape {
   color: #fff;
 }
 
+/* ZOOM */
+#zoom-container {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+}
 
+#zoom-in,
+#zoom-out {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 60px; /* Largura mínima para os botões */
+  max-width: 150px; /* Largura máxima para os botões */
+}
+
+#zoom-in:hover,
+#zoom-out:hover {
+  background-color: #555;
+}
+
+#zoom-percentage {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 60px; /* Largura mínima para o texto */
+  max-width: 150px; /* Largura máxima para o texto */
+}
+
+/* BOTAO */
+/* Estilos para o botão multifuncional */
+#multi-function-button {
+  position: absolute;
+  top: 10px;
+  right: 20px; /* Ajuste para alinhar corretamente */
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em; /* Ajustado para unidades relativas */
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%; /* Ajuste para impedir que ultrapasse a largura do contêiner */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+  white-space: normal; /* Permite quebra de linha */
+  overflow-wrap: break-word; /* Quebra palavras longas */
+}
+
+#multi-function-button:hover {
+  background-color: #555;
+}
+
+/* Estilos para o menu de funcionalidades */
+#function-menu {
+  display: none;
+  position: absolute;
+
+  right: 20px; /* Ajuste para alinhar corretamente */
+  background-color: #333;
+  border-radius: 5px;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 0.5em 0; /* Ajustado para unidades relativas */
+  max-width: 100%; /* Ajuste para impedir que ultrapasse a largura do contêiner */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+}
+
+#function-menu button {
+  display: block;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em; /* Ajustado para unidades relativas */
+  cursor: pointer;
+  font-size: 1em;
+  text-align: left;
+  border-top: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%; /* Ajuste para impedir que ultrapasse a largura do contêiner */
+  box-sizing: border-box; /* Inclui padding e border na largura */
+  white-space: normal; /* Permite quebra de linha */
+  overflow-wrap: break-word; /* Quebra palavras longas */
+}
+
+#function-menu button:first-child {
+  border-top: none;
+}
+
+#function-menu button:hover {
+  background-color: #555;
+}
+
+#zoom-percentage {
+  position: static;
+  margin-top: 0.5em;
+  min-width: 60px;
+  max-width: 150px;
+}

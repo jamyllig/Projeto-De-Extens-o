@@ -6,23 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <title>Cidade</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.3.0/zoom.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/zoom.js/0.3.0/zoom.min.css" />
 </head>
 
 <body id="home">
-<header id="background-nav">
-  <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
-  <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
-  <nav id="nav-horizontal" aria-label="Menu principal">
-    <a id="nav-home" href="./index.html">Home</a>
-    <a href="./brasil.html">Brasil</a>
-    <a href="">Internacional</a>
-    <a href="">Economia</a>
-    <a href="">Saúde</a>
-    <a href="">Ciencia</a>
-    <a href="./fotos.html">Fotos</a>
-  </nav>
-  <button id="toggle-contrast" aria-pressed="false">Alto Contraste</button>
-</header>  
+  <header id="background-nav">
+    <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
+    <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
+    <nav id="nav-horizontal" aria-label="Menu principal">
+      <a id="nav-home" href="./index.html">Home</a>
+      <a href="./brasil.html">Brasil</a>
+      <a href="">Internacional</a>
+      <a href="">Economia</a>
+      <a href="">Saúde</a>
+      <a href="">Ciencia</a>
+      <a href="./fotos.html">Fotos</a>
+    </nav>
+    <button id="multi-function-button">Acessibilidade</button>
+    <div id="function-menu">
+      <div id="zoom-container">
+        <button id="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+        <button id="zoom-in">Zoom +</button>
+        <button id="zoom-out">Zoom -</button>
+        <div id="zoom-percentage">100%</div>
+      </div>
+    </div>
+  </header>
 
   <main class="conteudos-principais">
     <!-- Coluna 1 -->
@@ -129,7 +139,7 @@
     </section>
     <!--FIM Coluna 3 -->
   </main>
-  
+
   <footer class="rodape" role="contentinfo">
     © Copyright 2000-2024 Notícias cidade
   </footer>
@@ -150,6 +160,41 @@
       var isPressed = this.getAttribute('aria-pressed') === 'true';
       this.setAttribute('aria-pressed', !isPressed);
     });
+
+    let zoomLevel = 1;
+
+    function updateZoomPercentage() {
+      const zoomPercentage = Math.round(zoomLevel * 100) + '%';
+      document.getElementById('zoom-percentage').textContent = zoomPercentage;
+    }
+
+    function ZoomIn() {
+      zoomLevel += 0.1;
+      document.body.style.zoom = zoomLevel;
+      updateZoomPercentage();
+    }
+
+    function ZoomOut() {
+      if (zoomLevel > 0.1) {
+        zoomLevel -= 0.1;
+        document.body.style.zoom = zoomLevel;
+        updateZoomPercentage();
+      }
+    }
+
+    document.getElementById('zoom-in').addEventListener('click', ZoomIn);
+    document.getElementById('zoom-out').addEventListener('click', ZoomOut);
+
+    document.getElementById('multi-function-button').addEventListener('click', function() {
+      var menu = document.getElementById('function-menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    });
+
+    updateZoomPercentage();
   </script>
 </body>
 
