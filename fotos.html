@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <title>Cidade</title>
 </head>
-
 <body id="fotos">
   <header id="background-nav">
-    <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
-    <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
+    <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" title="Logotipo da Notícias Cidade" /></div>
+    <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" title="Detalhe decorativo no topo do site" /></div>
     <nav id="nav-horizontal" aria-label="Menu principal">
       <a href="./index.html">Home</a>
       <a href="./brasil.html">Brasil</a>
-      <a href="">Internacional</a>
+      <a href="internacional.html">Internacional</a>
       <a href="">Economia</a>
       <a href="">Saúde</a>
       <a href="">Ciencia</a>
@@ -25,47 +23,65 @@
   </header>
 
   <main class="conteudos-principais">
-    <!--Coluna 2 -->
-    <section class="coluna2">
-      <article class="caixa">
-        <h2>Nova legislação</h2>
-        <div class="caixa-superior pag-principal pag-brasil pag-fotos">
-          <h3>Entrevista com Felipe Silva</h3>
-          <img src="./img/taxi.jpg" alt="Imagem de um táxi ilustrando a nova legislação" />
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="">Leia mais...</a>
-        </div>
-      </article>
-      <!-- Caixa Mundo -->
-      <article class="caixa">
-        <h2>Mundo</h2>
-        <div class="caixa-inferior">
-          <ul class="lista-noticias">
-            <li><a href="">
-                <img src="./img/cidade.jpg" alt="Imagem ilustrativa de uma cidade" />
-                <h4>Novas Tecnologias</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </a></li>
-            <li><a href="">
-                <img src="./img/taxi.jpg" alt="Imagem de um táxi ilustrando novas tecnologias" />
-                <h4>Novas Tecnologias</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </a></li>
-            <li><a href="">
-                <img src="./img/tecnologia.jpg" alt="Imagem ilustrativa de novas tecnologias" />
-                <h4>Novas Tecnologias</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </a></li>
-            <li><a href="">
-                <img src="./img/doutor.jpg" alt="Imagem ilustrativa de um doutor" />
-                <h4>Novas Tecnologias</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </a></li>
-          </ul>
-        </div>
-      </article>
-    </section>
-    <!--FIM Coluna 2 -->
+    <!-- Image Gallery -->
+    <div class="galeria_de_imagens">
+      <div class="image-container">
+        <img src="./img/cidade.jpg" alt="Imagem ilustrativa de uma cidade">
+        <div class="tooltip">Imagem ilustrativa de uma cidade</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/enchente.jpg" alt="Imagem ilustrativa de enchente">
+        <div class="tooltip">Imagem ilustrativa de enchente</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/cidade.jpg" alt="Imagem de cidade">
+        <div class="tooltip">Imagem de cidade</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/educacao.jpeg" alt="Imagem de educação">
+        <div class="tooltip">Imagem de educação</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/pandemia.jpeg" alt="Imagem de pandemia">
+        <div class="tooltip">Imagem de pandemia</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/lula.avif" alt="Imagem do presidente Lula">
+        <div class="tooltip">Imagem do presidente Lula</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/ftx.webp" alt="Imagem de Ryan Salame">
+        <div class="tooltip">Imagem de Ryan Salame</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/ucrania.jpg" alt="Conflito na Ucrânia">
+        <div class="tooltip">Conflito na Ucrânia</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/helicoptero.webp" alt="Helicóptero">
+        <div class="tooltip">Helicóptero</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/nova-guine.jpg" alt="Papua Nova Guiné">
+        <div class="tooltip">Papua Nova Guiné</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/malawi.jpg" alt="Mercado de Carbono na África">
+        <div class="tooltip">Mercado de Carbono na África</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/estagio.jpg" alt="Imagem sobre estágio">
+        <div class="tooltip">Imagem sobre estágio</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/imposto.webp" alt="Imagem de impostos">
+        <div class="tooltip">Imagem de impostos</div>
+      </div>
+      <div class="image-container">
+        <img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site">
+        <div class="tooltip">Detalhe decorativo no topo do site</div>
+      </div>
+    </div>
   </main>
 
   <footer class="rodape" role="contentinfo">
@@ -74,7 +90,7 @@
 
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
+    <div vw-plugin-wrapper">
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
@@ -90,5 +106,4 @@
     });
   </script>
 </body>
-
 </html>

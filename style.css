@@ -373,3 +373,42 @@ body.high-contrast footer.rodape {
 }
 
 
+.rodape{
+  text-align: center;
+}
+
+.galeria_de_imagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container {
+  position: relative;
+  margin: 10px;
+}
+
+.image-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 5px; /* Positioning the tooltip in the bottom corner */
+  right: 5px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  display: none; /* Hidden by default */
+}
+
+.image-container:hover .tooltip {
+  display: block; /* Show tooltip on hover */
+}
