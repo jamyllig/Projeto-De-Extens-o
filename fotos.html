@@ -19,7 +19,15 @@
       <a href="">Ciencia</a>
       <a id="nav-fotos" href="">Fotos</a>
     </nav>
-    <button id="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+    <button id="multi-function-button">Acessibilidade</button>
+    <div id="function-menu">
+      <div id="zoom-container">
+        <button id="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+        <button id="zoom-in">Zoom +</button>
+        <button id="zoom-out">Zoom -</button>
+        <div id="zoom-percentage">100%</div>
+      </div>
+    </div>
   </header>
 
   <main class="conteudos-principais">
@@ -104,6 +112,41 @@
       var isPressed = this.getAttribute('aria-pressed') === 'true';
       this.setAttribute('aria-pressed', !isPressed);
     });
+
+    let zoomLevel = 1;
+
+    function updateZoomPercentage() {
+      const zoomPercentage = Math.round(zoomLevel * 100) + '%';
+      document.getElementById('zoom-percentage').textContent = zoomPercentage;
+    }
+
+    function ZoomIn() {
+      zoomLevel += 0.1;
+      document.body.style.zoom = zoomLevel;
+      updateZoomPercentage();
+    }
+
+    function ZoomOut() {
+      if (zoomLevel > 0.1) {
+        zoomLevel -= 0.1;
+        document.body.style.zoom = zoomLevel;
+        updateZoomPercentage();
+      }
+    }
+
+    document.getElementById('zoom-in').addEventListener('click', ZoomIn);
+    document.getElementById('zoom-out').addEventListener('click', ZoomOut);
+
+    document.getElementById('multi-function-button').addEventListener('click', function() {
+      var menu = document.getElementById('function-menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    });
+
+    updateZoomPercentage();
   </script>
 </body>
 </html>

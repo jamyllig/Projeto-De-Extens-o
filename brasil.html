@@ -9,6 +9,7 @@
 </head>
 
 <body id="brasil">
+<<<<<<< HEAD
     <header id="background-nav">
         <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
         <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
@@ -23,6 +24,30 @@
         </nav>
         <button id="toggle-contrast" aria-pressed="false">Alto Contraste</button>
     </header>
+=======
+  <header id="background-nav">
+    <div class="img-logo"><img src="./img/logo.png" alt="Logotipo da Notícias Cidade" /></div>
+    <div class="img-brasil"><img src="./img/detalhe-topo.png" alt="Detalhe decorativo no topo do site" /></div>
+    <nav id="nav-horizontal" aria-label="Menu principal">
+      <a href="./index.html">Home</a>
+      <a id="nav-brasil" href="">Brasil</a>
+      <a href="">Internacional</a>
+      <a href="">Economia</a>
+      <a href="">Saúde</a>
+      <a href="">Ciencia</a>
+      <a href="./fotos.html">Fotos</a>
+    </nav>
+    <button id="multi-function-button">Acessibilidade</button>
+    <div id="function-menu">
+      <div id="zoom-container">
+        <button id="toggle-contrast" aria-pressed="false">Alto Contraste</button>
+        <button id="zoom-in">Zoom +</button>
+        <button id="zoom-out">Zoom -</button>
+        <div id="zoom-percentage">100%</div>
+      </div>
+    </div>
+  </header>
+>>>>>>> 02847f0e3bb8e90c53741daec8436b53852da00c
 
     <main class="conteudos-principais">
         <!-- Coluna 1 -->
@@ -102,6 +127,7 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
+<<<<<<< HEAD
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
@@ -113,6 +139,55 @@
             this.setAttribute('aria-pressed', !isPressed);
         });
     </script>
+=======
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script>
+    document.getElementById('toggle-contrast').addEventListener('click', function() {
+      document.body.classList.toggle('high-contrast');
+      var isPressed = this.getAttribute('aria-pressed') === 'true';
+      this.setAttribute('aria-pressed', !isPressed);
+    });
+
+    let zoomLevel = 1;
+
+    function updateZoomPercentage() {
+      const zoomPercentage = Math.round(zoomLevel * 100) + '%';
+      document.getElementById('zoom-percentage').textContent = zoomPercentage;
+    }
+
+    function ZoomIn() {
+      zoomLevel += 0.1;
+      document.body.style.zoom = zoomLevel;
+      updateZoomPercentage();
+    }
+
+    function ZoomOut() {
+      if (zoomLevel > 0.1) {
+        zoomLevel -= 0.1;
+        document.body.style.zoom = zoomLevel;
+        updateZoomPercentage();
+      }
+    }
+
+    document.getElementById('zoom-in').addEventListener('click', ZoomIn);
+    document.getElementById('zoom-out').addEventListener('click', ZoomOut);
+
+    document.getElementById('multi-function-button').addEventListener('click', function() {
+      var menu = document.getElementById('function-menu');
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'block';
+      }
+    });
+
+    updateZoomPercentage();
+  </script>
+>>>>>>> 02847f0e3bb8e90c53741daec8436b53852da00c
 </body>
 
 </html>
